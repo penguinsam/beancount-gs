@@ -22,7 +22,7 @@ func ImportAliPayCSV(c *gin.Context) {
 
 	result := make([]Transaction, 0)
 
-	currency := "CNY"
+	currency := "HKD"
 	currencySymbol := script.GetCommoditySymbol(currency)
 
 	for {
@@ -225,7 +225,7 @@ func ImportABCCSV(c *gin.Context) {
 
 	result := make([]Transaction, 0)
 
-	currency := "CNY"
+	currency := "HKD"
 	currencySymbol := script.GetCommoditySymbol(currency)
 
 	id := 0

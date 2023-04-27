@@ -54,7 +54,7 @@ func LoadServerConfig() error {
 	if !FileIfExist(filePath) {
 		serverConfig = Config{
 			OpeningBalances:   "Equity:OpeningBalances",
-			OperatingCurrency: "CNY",
+			OperatingCurrency: "HKD",
 			StartDate:         "1970-01-01",
 			IsBak:             true,
 		}
@@ -373,6 +373,8 @@ func GetCommoditySymbol(commodity string) string {
 	case "CNY":
 		return "￥"
 	case "USD":
+		return "$"
+	case "HKD":
 		return "$"
 	}
 	return ""
